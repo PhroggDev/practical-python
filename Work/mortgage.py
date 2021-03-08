@@ -19,8 +19,7 @@ while principal > 0:
     if months >= extra_payment_start_month and months <= extra_payment_end_month:
         principal -= extra_payment
         total_paid += extra_payment
-    print("Month: " + str(months) + " TotalPaid: " + str(round(total_paid,2)) +
-          " PrincipalRemaining: " + str(round(principal,2)))
+    print(str(months) + ' ' + str(round(total_paid,2)) + ' ' + str(round(principal,2)))
 
 print("Total paid: ", round(total_paid, 2))
 print("It took " + str(months) + " months to payoff loan")
