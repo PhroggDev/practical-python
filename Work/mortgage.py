@@ -23,4 +23,4 @@ while principal > 0:
           " PrincipalRemaining: " + str(round(principal,2)))
 
 print("Total paid: ", round(total_paid, 2))
-print("It took " + str(months) + " months to payoff loan")
+# print("It took " + str(months) + " months to payoff loan")
