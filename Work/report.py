@@ -12,9 +12,14 @@ def read_portfolio(filename):
     including name, # of shares, and current price
     """
     portfolio = []
+    global printHeader
+    printHeader = ''
     with open(filename) as f:
         rows = csv.reader(f)
         headers = next(rows)
+        for i in range(len(headers)):
+            printHeader += f'{headers[i].capitalize(): >10s} '
+        printHeader += f'{"Change": >10s}'
         for row in rows:
             stock = {
                 'name': row[0],
@@ -50,6 +55,8 @@ def make_report(portfolio, prices):
         Record.append(prices[portfolio[i]['name']] - portfolio[i]['price'])
         myTRecord = *Record,
         report.append(myTRecord)
+    print(printHeader)
+    print(f"{'-'*10} {'-'*10} {'-'*10} {'-'*10}")
     for name, shares, price, change in report:
         print(f"{name:>10s} {shares:>10d} {price:>10.2f} {change:>10.2f}")
 
