@@ -1,8 +1,7 @@
 # report.py
 #
 # Exercise 2.4
-<<<<<<< Updated upstream
-=======
+
 import csv
 import sys
 
@@ -81,4 +80,3 @@ else:
 portfolio = read_portfolio('Data/portfolio.csv')
 prices = read_prices('Data/prices.csv')
 make_report(portfolio, prices)
->>>>>>> Stashed changes
