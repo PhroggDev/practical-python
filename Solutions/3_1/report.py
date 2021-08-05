@@ -54,18 +54,23 @@ def make_report_data(portfolio, prices):
     return rows
 
 
+def print_report(report):
+    headers = ('Name', 'Shares', 'Price', 'Change')
+    print('%10s %10s %10s %10s' % headers)
+    print(('-' * 10 + ' ') * len(headers))
+    for row in report:
+        print('%10s %10d %10.2f %10.2f' % row)
+
 # Read data files and create the report data
+
 
 portfolio = read_portfolio('../../Work/Data/portfolio.csv')
 prices = read_prices('../../Work/Data/prices.csv')
 
 # Generate the report data
 
-report = make_report_data(portfolio, prices)
+report_data = make_report_data(portfolio, prices)
 
-# Output the report
-headers = ('Name', 'Shares', 'Price', 'Change')
-print('%10s %10s %10s %10s' % headers)
-print(('-' * 10 + ' ') * len(headers))
-for row in report:
-    print('%10s %10d %10.2f %10.2f' % row)
+# Output the report using a function
+
+print_report(report_data)
