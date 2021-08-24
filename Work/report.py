@@ -2,7 +2,8 @@
 #
 # Exercise 2.4
 import csv
-import sys
+# import sys
+
 
 def read_portfolio(filename):
     portfolio = []
@@ -11,7 +12,7 @@ def read_portfolio(filename):
         headers = next(rows)
         try:
             for row in rows:
-                holding = (row[0],int(row[1]),float(row[2]))
+                holding = (row[0], int(row[1]), float(row[2]))
                 portfolio.append(holding)
         except ValueError:
             print('Missing or Bad value')
