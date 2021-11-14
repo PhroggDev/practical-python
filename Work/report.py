@@ -6,13 +6,12 @@ import csv
 
 
 def read_portfolio(filename):
-    portfolio = {}
-    with open(filename, 'r') as data:
-        for line in csv.DictReader(data):
-            print(line)
+    with open(filename, 'r') as f:
+        data = csv.DictReader(f)
+        # print(line)
         # except ValueError:
         #     print('Missing or Bad value')
-    return portfolio
+        return data
     # if len(sys.argv) == 2:
     #     filename = sys.argv[1]
     # else:
