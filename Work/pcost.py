@@ -2,7 +2,7 @@
 #
 # Exercise 1.27
 totalCost = 0
-with open('Data/portfolio.csv','rt') as f:
+with open('Data/portfolio.csv', 'rt') as f:
     headers = next(f).split(',')
     for line in f:
         row = line.split(',')
