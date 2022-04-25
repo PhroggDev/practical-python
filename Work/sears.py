@@ -1,8 +1,8 @@
 # sears.py ==> calculate how long it takes for stack of dollar bills to exceed
 # height of Sears Tower in Chicago if doubling the number of bills added each
 # day
-bill_thickness = 0.11 * 0.001 # Meters (0.11mm)
-sears_height = 442 # height of Sears Tower in meters
+bill_thickness = 0.11 * 0.001  # Meters (0.11mm)
+sears_height = 442  # height of Sears Tower in meters
 num_bills = 1
 day = 1
 
