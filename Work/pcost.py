@@ -1,6 +1,6 @@
 # pcost.py
 #
-# Exercise 1.27
+# Exercise 1.31
 def portfolioCost(filename):
     totalCost = 0
     with open(filename, 'rt') as f:
@@ -15,4 +15,9 @@ def portfolioCost(filename):
             print('Missing or Bad value')
             next(f)
     return totalCost
-# print(f'Total cost: {portfolioCost('Data/portfolio.csv'):.2f}')
+
+
+# Once with good values
+# print(f"Total cost: {portfolioCost('Data/portfolio.csv'):.2f}")
+# Now once again with csv missing values to see if we throw the error in the function
+print(f"Total cost: {portfolioCost('Data/missing.csv'):.2f}")
