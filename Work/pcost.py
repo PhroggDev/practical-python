@@ -1,6 +1,7 @@
 # pcost.py
 #
-# Exercise 1.32
+# Exercise 1.33
+# Reading file name(s) from the cli
 import csv
 
 f = open('Data/portfolio.csv')
