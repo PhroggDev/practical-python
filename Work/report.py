@@ -2,17 +2,13 @@
 #
 # Exercise 2.4
 import csv
-# import sys
-
-
 def read_portfolio(filename):
-    with open(filename, 'r') as f:
-        data = csv.DictReader(f)
-        # print(line)
-        # except ValueError:
-        #     print('Missing or Bad value')
-        return data
-    # if len(sys.argv) == 2:
-    #     filename = sys.argv[1]
-    # else:
-    # filename = 'Data/portfolio.csv'
+    """Computes the total cost (shares*price) of a portfolio file"""
+    portfolio = []
+    with open(filename) as f:
+        rows = csv.reader(f)
+        headers = next(rows)
+        for row in rows:
+            holding = (row[0], int(row[1]), float(row[2]))
+            portfolio.append(holding)
+    return portfolio
