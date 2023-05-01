@@ -17,12 +17,19 @@ def read_portfolio(filename):
     return portfolio
 
 
+# Exercise 2.6
 def read_prices(filename):
     """Update data object with 'current' list of prices from file"""
-    prices = []
+    prices = {}
     with open(filename, 'rt') as f:
         rows = csv.reader(f)
         for row in rows:
-            if len(row) != 0: prices.append(row)
-            else: continue
+            # print(row)
+            try:
+                key = row[0]
+                val = row[1]
+                # print(f"Key: {key} Val: {val}")
+                prices[key] = float(val)
+            except:
+                continue
     return prices
