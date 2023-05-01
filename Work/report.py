@@ -38,14 +38,14 @@ def read_prices(filename):
 # check if the files with price data are cli parameters
 # set default test data if not passed to script
 if len(sys.argv) == 3:
-    filename1 = sys.argv[1]
-    filename1 = sys.argv[2]
+    porfolio_file = sys.argv[1]
+    price_file = sys.argv[2]
 else:
-    filename1 = 'Data/portfolio.csv'
-    filename2 = 'Data/prices.csv'
+    porfolio_file = 'Data/portfolio.csv'
+    price_file = 'Data/prices.csv'
 
-portfolio = read_portfolio(filename1)
-prices = read_prices(filename2)
+portfolio = read_portfolio(porfolio_file)
+prices = read_prices(price_file)
 
 # print value of portfolio followed by value of price list
 totalCost = 0.0
