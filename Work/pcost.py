@@ -1,7 +1,7 @@
 # pcost.py
 #
-# Exercise 1.27
-def portfolioCost(filename):
+# Exercise 2.15
+def portfolio_cost(filename):
     totalCost = 0
     with open(filename, 'rt') as f:
         headers = next(f).split(',')
@@ -15,4 +15,4 @@ def portfolioCost(filename):
             print('Missing or Bad value')
             next(f)
     return totalCost
-# print(f'Total cost: {portfolioCost('Data/portfolio.csv'):.2f}')
+# print(f'Total cost: {portfolio_cost('Data/portfolio.csv'):.2f}')
