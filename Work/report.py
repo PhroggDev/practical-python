@@ -6,7 +6,8 @@ import sys
 
 def read_portfolio(filename):
     """
-    Read a stock portfolio from a csv file into a list of dictionary entries including name, # of shares, and current price
+    Read a stock portfolio from a csv file into a list of dictionary entries
+    including name, # of shares, and current price
     """
     portfolio = []
     with open(filename) as f:
