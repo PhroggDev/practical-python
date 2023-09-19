@@ -18,6 +18,9 @@ def portfolioCost(filename):
 
 
 # Once with good values
-# print(f"Total cost: {portfolioCost('Data/portfolio.csv'):.2f}")
+print("Using a known good CSV file:")
+print(f"Total cost: {portfolioCost('Data/portfolio.csv'):.2f}")
+print("=*="*17)
 # Now once again with csv missing values to see if we throw the error in the function
+print("Using a CSV file with a missing or malformed entry:")
 print(f"Total cost: {portfolioCost('Data/missing.csv'):.2f}")
