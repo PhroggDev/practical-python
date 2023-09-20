@@ -1,0 +1,16 @@
+# coding: utf-8
+d = {
+'name' : row[0],
+'shares' : int(row[1]),
+'price' : float(row[2])
+}
+d
+# Calculate the cost of this holding: \
+cost = d['shares'] * d['price']
+print(cost)
+# What happened? I Python math broken... or did I forget to format the output? \
+# Unlike Tuples Dictionaries can be readily and easily modified \
+# Compare the following to what happened when we tried to modify a member \
+# of a tuple \
+d['shares'] = 75 \
+print(d)

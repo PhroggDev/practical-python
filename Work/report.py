@@ -1,6 +1,6 @@
 # report.py
 #
-# Exercise 2.4
+# Exercise 2.9
 import csv
 import sys
 
@@ -51,10 +51,9 @@ def make_report(portfolio, prices):
         returnVal.append(myTRecord)
     return returnVal
 
+
 # check if the files with price data are cli parameters
 # set default test data if not passed to script
-
-
 if len(sys.argv) == 3:
     porfolio_file = sys.argv[1]
     price_file = sys.argv[2]

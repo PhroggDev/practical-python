@@ -1,0 +1,27 @@
+# coding: utf-8
+import csv
+f = open('Data/portfolio.csv', 'rt')
+rows = csv.reader(f)
+next(rows)
+row = next(rows)
+row
+# cost = row[1] * row[2]
+t = (row[0], int(row[1]), float(row[2]))
+t
+cost = t[1] * t[2]
+# is math broken in Python?
+cost
+# perhaps not
+print(f"{cost:0.2f}")
+# tuples are read-only
+t = (t[0], 75, t[2])
+t
+# t[0] = 'BB'
+# You can however, reassign values to an existing tuple
+name, shares, price = t
+name
+shares
+price
+# Now we can reassign values, doubling the shares
+t = (name, shares*2, price)
+t
