@@ -1,5 +1,4 @@
 # report.py
-#
 # Exercise 2.4
 import csv
 import sys
@@ -7,8 +6,8 @@ import sys
 
 def read_portfolio(filename):
     """
-    Read a stock portfolio from a csv file into a list of dictionary entries
-    including name, # of shares, and current price
+    Read a stock portfolio from a csv file into a dictionary 
+    that maps name, shares, and current price
     """
     portfolio = []
     with open(filename) as f:
@@ -53,8 +52,6 @@ def make_report(portfolio, prices):
 
 # check if the files with price data are cli parameters
 # set default test data if not passed to script
-
-
 if len(sys.argv) == 3:
     porfolio_file = sys.argv[1]
     price_file = sys.argv[2]
@@ -64,24 +61,10 @@ else:
 
 portfolio = read_portfolio(porfolio_file)
 prices = read_prices(price_file)
-
-# print value of portfolio followed by value of price list
-# totalCost = 0.0
-# for s in portfolio:
-#     totalCost += s['shares'] * s['price']
-# print(f"Total cost of Portfolio: {totalCost:.2f}")
-# totalValue = 0.0
-# for s in portfolio:
-#     totalValue += s['shares'] * prices[s['name']]
-# print(f"Current Value of Portfolio: {totalValue:.2f}")
-# print(f"Gain/Loss: {totalValue - totalCost:.2f}")
-portfolio = read_portfolio('Data/portfolio.csv')
-prices = read_prices('Data/prices.csv')
 report = make_report(portfolio, prices)
-# Print some headers at top of report
 headers = ('Name', 'Shares', 'Price', 'Change')
-for n in headers:
-    print(f"{n:>10s} ", end='')
+for h in headers:
+    print(f"{h:>10s} ", end='')
 print()
 # follow header names with dashes separating columns with a space
 print(f"{'-'*10:>10s} " * 4)
