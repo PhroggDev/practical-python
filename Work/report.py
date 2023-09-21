@@ -13,6 +13,15 @@ def read_portfolio(filename):
     with open(filename) as f:
         rows = csv.reader(f)
         headers = next(rows)
+    portfolio = []
+    global printHeader
+    printHeader = ''
+    with open(filename) as f:
+        rows = csv.reader(f)
+        headers = next(rows)
+        for i in range(len(headers)):
+            printHeader += f'{headers[i].capitalize(): >10s} '
+        printHeader += f'{"Change": >10s}'
         for row in rows:
             stock = {
                 'name': row[0],
@@ -40,6 +49,7 @@ def read_prices(filename):
 
 def make_report(portfolio, prices):
     returnVal = []
+    report = []
     for i in range(len(portfolio)):
         Record = []
         Record.append(portfolio[i]['name'])
